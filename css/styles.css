@@ -20,6 +20,13 @@ header {
     justify-content: center;
 }
 
+footer{
+background-color: #143774;
+color: white;
+text-align: center;
+padding: 3rem 0;
+}
+
 
 .site-title{
     margin: 105px 0;
@@ -111,24 +118,58 @@ nav ul li{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
-@media screen and (max-width: 675px){
+
+aside{
+    width: 100%;
+    min-width: 250px;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width: 675px){
     .container-flex{
         flex-direction: row;
     }
 
-    main{
-        width: 75%;
+    nav {
+        flex-direction: row;
     }
-    
-    aside{
-        width: 20%;
-    }
-    
-    nav{
-        display: flex;
-        flex-direction: column;
-    }
+}
+
+/* Widget */
+
+.sidebar-widget{
+    border: #F8F8F8 20px solid;
+    margin-bottom: 1rem;
+    padding: 1rem;
+}
+
+.widget-title, .widget-recent-posts-title{
+    font-size: 1rem;
+
+}
+.widget-title{
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+}
+
+.widget-recent-post{
+    display: flex;
+    flex-direction: column;
+}
+
+.widget-recent-post-title{
+    order: 2;
+    border-bottom: 2px solid #707070;
+    margin-bottom: 1rem;
+}
+
+.widget-recent-post-title:last-child{
+    border: 0;
+    margin-bottom: 0;
+}
+
+.widget-image{
+    order: -1;
 }
