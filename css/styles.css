@@ -6,10 +6,11 @@ body{
     font-family: 'Ubuntu', sans-serif;
 }
 
-a {
-    color: inherit; /* This will make the link inherit the color of its parent element */
-    text-decoration: none; /* This will remove the underline from the link */
+img{
+    max-width: 100%;
+    display: block;
 }
+
 
 /* Header */
 
@@ -19,15 +20,6 @@ header {
     justify-content: center;
 }
 
-.container{
-    max-width: 1040px;
-}
-
-.container-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 .site-title{
     margin: 105px 0;
@@ -39,7 +31,11 @@ h1, h2, h3, .article-title{
     font-family: 'Lora';
     font-weight: 400;
     color: #143774;
+}
 
+a {
+    color: inherit; /* This will make the link inherit the color of its parent element */
+    text-decoration: none; /* This will remove the underline from the link */
 }
 
 .site-title h1{
@@ -66,6 +62,15 @@ h1, h2, h3, .article-title{
     color: #1792D2;
 }
 
+.article-read-more:hover,
+.article-read-more:focus{
+    text-decoration: underline;
+    font-size: .875rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #143774;
+}
+
 .article-info{
     font-size: .875rem;
     color: #A0A0A0;
@@ -73,9 +78,13 @@ h1, h2, h3, .article-title{
 
 /* Navigation */
 
+nav{
+    display: flex;
+    flex-direction: column;
+}
+
 nav ul{
     list-style: none;
-    display: flex;
     text-transform: uppercase;
     letter-spacing: 3.2px;
     text-align: right;
@@ -87,6 +96,39 @@ nav ul li{
 
 /* Main */
 
+
+
 .article-image{
     max-width: 200px;
+}
+
+.container{
+    width: 90%;
+    max-width: 1040px;
+}
+
+.container-flex{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 675px){
+    .container-flex{
+        flex-direction: row;
+    }
+
+    main{
+        width: 75%;
+    }
+    
+    aside{
+        width: 20%;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+    }
 }
